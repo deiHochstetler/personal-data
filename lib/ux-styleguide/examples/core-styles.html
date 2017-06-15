@@ -1,0 +1,443 @@
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../dist/ux-styleguide.min.css">
+	<style>
+		body {
+			background-color: #fff;
+			overflow-x: hidden;
+		}
+		
+		h3 {
+			border-bottom: 2px solid #444;
+			margin-bottom: 0;
+		}
+		
+		code,
+		pre {
+			padding: 0 3px 2px;
+			font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+			font-size: 12px;
+			color: #333333;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			height: 100%;
+		}
+		
+		pre {
+			display: block;
+			padding: 9.5px;
+			margin: 0 0 10px;
+			font-size: 13px;
+			line-height: 20px;
+			word-break: break-all;
+			word-wrap: break-word;
+			white-space: pre;
+			white-space: pre-wrap;
+			background-color: #f5f5f5;
+			border: 1px solid #ccc;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+		}
+		
+		pre code {
+			padding: 0;
+			color: inherit;
+			white-space: pre;
+			white-space: pre-wrap;
+			background-color: transparent;
+			border: 0;
+		}
+		
+		section {
+			margin: auto;
+			padding: 10px;
+		}
+		
+		table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 10px 20px;
+		}
+		
+		td {
+			width: 50%;
+			vertical-align: top;
+			height: 1px;
+		}
+		
+		.button-group {
+			margin-bottom: 15px;
+		}
+		
+		.button-group-vertical {
+			margin-right: 15px;
+		}
+		
+		.sample_icon:before {
+			content: "\2660";
+		}
+		
+		.back-btn {
+			width: 70px !important;
+			font-size: 20px !important;
+		}
+		
+		.back-btn > a {
+			color: #fff;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+
+	<script src="../dist/ux-styleguide.min.js"></script>
+
+	<script>
+		function loadDeterminate(button) {
+			// Create loader button via script
+			var btn = LoaderBtn.create(document.querySelector( '#' + button.id ) );
+
+			// Start animation and set custom loading message on button
+			var loadingMessage = 'Load Msg...';
+			btn.start(loadingMessage);
+
+			// Set progress on scale of 0-1 for percentage
+			// This interval randomly sets progress to simulate determined loading
+			var progress = 0;
+			var interval = setInterval(function() {
+				progress = Math.min(progress + Math.random() * 0.1, 1);
+				btn.setProgress(progress);
+				if(progress === 1) {
+					btn.stop();
+					clearInterval(interval);
+				}
+			}, 200);
+		}
+
+		function loadIndeterminate(button) {
+			// Create loader button via script
+			var btn = LoaderBtn.create(document.querySelector('#' + button.id ));
+
+			// Start animation and set custom loading message on button
+			var loadingMessage = 'Load Msg...';
+			btn.start(loadingMessage);
+
+			// This timeout will stop animation after data "load" is complete
+			setTimeout(function(btn) {
+				btn.stop(); // Stop animation
+			}, 5000, btn);
+		}
+	</script>
+	<div class="header">
+		<div class="header-logo">
+			<i class="icon_homedepot"></i>
+		</div>
+		<div class="header-info">
+			<label class="product-info">UX Styleguide</label>
+			<label class="user-info">Compilation of HTML, CSS and SASS packages provided by Home Depot UX.</label>
+		</div>
+		<div class="header-search">
+		</div>
+		<div class="header-actions">
+			<div class="back-btn">
+				<a href="../index.html">Back</a>
+			</div>
+		</div>
+	</div>
+	<div class="content">
+		<h2>CORE STYLES</h2>
+		<section>
+			<h3>PRIMARY BUTTONS</h3>
+			<table>
+				<tr>
+					<td>
+						<button class="button primary">Large</button>
+						<button class="button primary md">Medium</button>
+						<button class="button primary sm">Small</button>
+						<button class="button primary" disabled>Disabled</button>
+					</td>
+					<td>
+						<pre><code>&lt;button class="button primary"&gt;Large&lt;/button&gt;
+&lt;button class="button primary md"&gt;Medium&lt;/button&gt;
+&lt;button class="button primary sm"&gt;Small&lt;/button&gt;
+&lt;button class="button primary" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+			<h3>SECONDARY BUTTONS</h3>
+			<table>
+				<tr>
+					<td>
+						<button class="button">Large</button>
+						<button class="button md">Medium</button>
+						<button class="button sm">Small</button>
+						<button class="button" disabled>Disabled</button>
+					</td>
+					<td>
+						<pre><code>&lt;button class="button"&gt;Large&lt;/button&gt;
+&lt;button class="button md"&gt;Medium&lt;/button&gt;
+&lt;button class="button sm"&gt;Small&lt;/button&gt;
+&lt;button class="button" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+			<h3>TERTIARY BUTTONS</h3>
+			<table>
+				<tr>
+					<td>
+						<button class="button tertiary">Large</button>
+						<button class="button tertiary md">Medium</button>
+						<button class="button tertiary sm">Small</button>
+						<button class="button tertiary" disabled>Disabled</button>
+					</td>
+					<td>
+						<pre><code>&lt;button class="button tertiary"&gt;Large&lt;/button&gt;
+&lt;button class="button tertiary md"&gt;Medium&lt;/button&gt;
+&lt;button class="button tertiary sm"&gt;Small&lt;/button&gt;
+&lt;button class="button tertiary" disabled&gt;Disabled&lt;/button&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+
+			<h3>DETERMINATE LOADER BUTTONS</h3>
+			<table>
+				<tr>
+					<td>
+						<button class="loader-btn primary" id="detPri" onclick="loadDeterminate(this)">Submit</button>
+						<button class="loader-btn" id="detSec" onclick="loadDeterminate(this)">Submit</button>
+						<button class="loader-btn tertiary" id="detTer" onclick="loadDeterminate(this)">Submit</button>
+					</td>
+					<td>
+						<pre><code>&lt;button class="loader-btn primary" id="detPri" onclick="loadDeterminate(this)"&gt;Submit&lt;/button&gt;
+
+&lt;button class="loader-btn" id="detSec" onclick="loadDeterminate(this)"&gt;Submit&lt;/button&gt;
+
+&lt;button class="loader-btn tertiary" id="detTer" onclick="loadDeterminate(this)"&gt;Submit&lt;/button&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+			<h3>INDETERMINATE LOADER BUTTONS</h3>
+			<table>
+				<tr>
+					<td>
+						<button class="loader-btn primary" id="indPri" onclick="loadIndeterminate(this)" indeterminate>Submit</button>
+						<button class="loader-btn" id="indSec" onclick="loadIndeterminate(this)" indeterminate>Submit</button>
+						<button class="loader-btn tertiary" id="indTer" onclick="loadIndeterminate(this)" indeterminate>Submit</button>
+					</td>
+					<td>
+						<pre><code>&lt;button class="loader-btn primary" id="indPri" onclick="loadIndeterminate(this)" indeterminate&gt;Submit&lt;/button&gt;
+
+&lt;button class="loader-btn" id="indSec" onclick="loadIndeterminate(this)" indeterminate&gt;Submit&lt;/button&gt;
+
+&lt;button class="loader-btn tertiary" id="indTer" onclick="loadIndeterminate(this)" indeterminate&gt;Submit&lt;/button&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+			<h3>HORIZONTAL BUTTON GROUP</h3>
+			<table>
+				<tr>
+					<td>
+						<div class="button-group">
+							<button class="button">Large 1</button>
+							<button class="button">Large 2</button>
+							<button class="button">Large 3</button>
+							<button class="button">Large 4</button>
+						</div>
+						<div class="button-group">
+							<button class="button md">Medium 1</button>
+							<button class="button md">Medium 2</button>
+							<button class="button md">Medium 3</button>
+							<button class="button md">Medium 4</button>
+						</div>
+						<div class="button-group">
+							<button class="button sm">Small 1</button>
+							<button class="button sm">Small 2</button>
+							<button class="button sm">Small 3</button>
+							<button class="button sm">Small 4</button>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="button-group"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button"&gt;Large 1&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button"&gt;Large 2&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button"&gt;Large 3&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button"&gt;Large 4&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="button-group"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button md"&gt;Medium 1&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button md"&gt;Medium 2&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button md"&gt;Medium 3&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button md"&gt;Medium 4&lt;/button&gt;
+&lt;/div&gt;
+&lt;div class="button-group"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button sm"&gt;Small 1&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button sm"&gt;Small 2&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button sm"&gt;Small 3&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button sm"&gt;Small 4&lt;/button&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+			<h3>VERTICAL BUTTON GROUP</h3>
+			<table>
+				<tr>
+					<td>
+						<div class="button-group-vertical">
+							<div class="button-group">
+								<button class="button">Large 1</button>
+								<button class="button">Large 2</button>
+								<button class="button">Large 3</button>
+								<button class="button">Large 4</button>
+							</div>
+						</div>
+						<div class="button-group-vertical">
+							<div class="button-group">
+								<button class="button md">Medium 1</button>
+								<button class="button md">Medium 2</button>
+								<button class="button md">Medium 3</button>
+								<button class="button md">Medium 4</button>
+							</div>
+						</div>
+						<div class="button-group-vertical">
+							<div class="button-group">
+								<button class="button sm">Small 1</button>
+								<button class="button sm">Small 2</button>
+								<button class="button sm">Small 3</button>
+								<button class="button sm">Small 4</button>
+							</div>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="button-group-vertical"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="button-group"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button"&gt;Large 1&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button"&gt;Large 2&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button"&gt;Large 3&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button"&gt;Large 4&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="button-group-vertical"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="button-group"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button md"&gt;Medium 1&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button md"&gt;Medium 2&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button md"&gt;Medium 3&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button md"&gt;Medium 4&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="button-group-vertical"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="button-group"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button sm"&gt;Small 1&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button sm"&gt;Small 2&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button sm"&gt;Small 3&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;button class="button sm"&gt;Small 4&lt;/button&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+			<h3>ICON BUTTON</h3>
+			<table>
+				<tr>
+					<td>
+						<label style="margin-right:10px;">Primary</label>
+						<i class="button primary icon sample_icon"></i>
+						<i class="button primary icon sample_icon disabled"></i>
+					</td>
+					<td>
+						<pre><code>&lt;i class="button primary icon sample_icon"&gt;&lt;/i&gt;
+&lt;i class="button primary icon sample_icon disabled"&gt;&lt;/i&gt;</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label style="margin-right:10px;">Secondary</label>
+						<i class="button icon sample_icon"></i>
+						<i class="button icon sample_icon disabled"></i>
+					</td>
+					<td>
+						<pre><code>&lt;i class="button icon sample_icon"&gt;&lt;/i&gt;
+&lt;i class="button icon sample_icon disabled"&gt;&lt;/i&gt;</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label style="margin-right:10px;">Tertiary</label>
+						<i class="button tertiary icon sample_icon"></i>
+						<i class="button tertiary icon sample_icon disabled"></i>
+					</td>
+					<td>
+						<pre><code>&lt;i class="button tertiary icon sample_icon"&gt;&lt;/i&gt;
+&lt;i class="button tertiary icon sample_icon disabled"&gt;&lt;/i&gt;</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<label style="margin-right:10px;">Sizes</label>
+						<i class="button primary icon sample_icon"></i>
+						<i class="button primary icon md sample_icon"></i>
+						<i class="button primary icon sm sample_icon"></i>
+					</td>
+					<td>
+						<pre><code>&lt;i class="button primary icon sample_icon"&gt;&lt;/i&gt;
+&lt;i class="button primary icon md sample_icon "&gt;&lt;/i&gt;
+&lt;i class="button primary icon sm sample_icon "&gt;&lt;/i&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h3>CARD</h3>
+			<table>
+				<tr>
+					<td>
+						<div class="card">
+							<div class="card-toolbar">
+								<span class="card-title">
+									<h2>Card Title</h2>
+								</span>
+								<i class="icon_close"></i>
+							</div>
+							<div class="card-content">
+								Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+								Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis
+								aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint
+								occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+							</div>
+							<div class="card-actions right">
+								<a class="button">Save</a>
+								<a class="button primary">Continue</a>
+							</div>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="card"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card-toolbar"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="card-title"&gt;&lt;h2&gt;Card Title&lt;/h2&gt;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_close"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card-content"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;mollit anim id est laborum.
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card-actions right"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="button"&gt;Save&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="button primary"&gt;Continue&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</div>
+</body>
+
+</html>

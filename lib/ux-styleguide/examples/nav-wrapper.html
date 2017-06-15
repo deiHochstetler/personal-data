@@ -1,0 +1,189 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/ux-styleguide.min.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #fff;
+            overflow-x: hidden;
+        }		
+        
+        h3 {
+            border-bottom: 2px solid #444;
+            margin-bottom: 0;
+        }
+        
+        code,
+        pre {
+            padding: 0 3px 2px;
+            font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+            font-size: 12px;
+            color: #333333;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            height: 100%;
+        }
+        
+        pre {
+            display: block;
+            padding: 9.5px;
+            margin: 0 0 10px;
+            font-size: 13px;
+            line-height: 20px;
+            word-break: break-all;
+            word-wrap: break-word;
+            white-space: pre;
+            white-space: pre-wrap;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+        
+        pre code {
+            padding: 0;
+            color: inherit;
+            white-space: pre;
+            white-space: pre-wrap;
+            background-color: transparent;
+            border: 0;
+        }
+        
+        section {
+            margin: auto;
+            padding: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px 20px;
+        }
+        
+        td {
+            width: 50%;
+            vertical-align: top;
+            height: 1px;
+        }
+		
+		.back-btn {
+			width: 70px !important;
+			font-size: 20px !important;
+		}
+		
+		.back-btn > a {
+			color: #fff;
+			text-decoration: none;
+		}
+    </style>
+</head>
+
+<body>
+    <div class="navigation-wrapper">
+        <div class="sidenav scrollable">
+            <div class="sidenav-info">
+                <div class="header-logo">
+                    <i class="icon_homedepot"></i>
+                </div>
+                <label class="sidenav-user">Firstname Lastname</label>
+                <label class="sidenav-location">Store Location | Department</label>
+                <a class="fab" href="#">Store<span>0000</span></a>
+            </div>
+            <ul class="nav">
+                <li><a href="#" class="active"><i class="icon_nav_dashboard"></i>Dashboard</a></li>
+                <li><a href="#"><i class="icon_nav_esvs"></i>ESVS</a></li>
+                <li><a href="#"><i class="icon_nav_quote_center"></i>HD Quote Center</a></li>
+                <li><a href="#"><i class="icon_nav_proxtra"></i>Pro Xtra</a>
+                <li><a href="#"><i class="icon_nav_hd_online"></i>HD.com</a>
+                <li><a href="#"><i class="icon_nav_spos"></i>SPOS</a></li>
+                <li><a href="#"><i class="icon_nav_appliance_ordering"></i>Appliance Ordering</a></li>
+            </ul>
+        </div>
+        <section class="content-area with-header">
+            <div class="header">
+                <div class="header-logo">
+                    <i class="icon_homedepot"></i>
+                </div>
+                <div class="header-info">
+                </div>
+                <div class="header-search">
+                    <input type="search" placeholder="Search Here" />
+                    <i class="icon_search"></i>
+                </div>
+                <div class="header-actions">
+                    <div><i class="icon_bell"></i></div>
+                    <div><i class="icon_cart"></i></div>
+                    <div><i class="icon_settings"></i></div>
+			        <div class="back-btn"><a href="../index.html">Back</a></div>
+                </div>
+            </div>
+            <div class="content">
+                <section>
+                    <h3>NAVIGATION WRAPPER</h3>
+                    <table>
+                        <tr>
+                            <td>
+                                Full navigation layout with Sidenav, Header and Content<br/><br/>
+                                <b>*NOTE:</b> Page requires <i>navigation-wrapper</i> with <i>sidenav</i> and <i>content-area</i> for proper layout<br/>
+                                <b>*NOTE:</b> App Information contains: <i>sidenav-user</i> which is User Name, <i>sidenav-location</i> which can contain store location or user's department, and Store number below<br/>
+                                <b>*NOTE:</b> When using header in conjunction with sidenav, remove content within <i>header-info</i> div. Also add <i>with-header</i> to <i>content-area</i> div.<br/>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <pre><code>&lt;div class="navigation-wrapper"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="sidenav scrollable"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="sidenav-info"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-logo"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_homedepot"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="sidenav-user"&gt;Firstname Lastname&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="sidenav-location"&gt;Store Location | Department&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;a class="fab" href="#"&gt;Store&lt;span&gt;0000&lt;/span&gt;&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;ul class="nav"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#" class="active"&gt;&lt;i class="icon_nav_dashboard"&gt;&lt;/i&gt;Dashboard&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon_nav_esvs"&gt;&lt;/i&gt;ESVS&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon_nav_quote_center"&gt;&lt;/i&gt;HD Quote Center&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon_nav_proxtra"&gt;&lt;/i&gt;Pro Xtra&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon_nav_hd_online"&gt;&lt;/i&gt;HD.com&lt;/a&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon_nav_spos"&gt;&lt;/i&gt;SPOS&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon_nav_appliance_ordering"&gt;&lt;/i&gt;Appliance Ordering&lt;/a&gt;&lt;/li&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/ul&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;section class="content-area with-header"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-logo"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_homedepot"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-info"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-search"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="search" placeholder="Search Here" /&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_search"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-actions"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;i class="icon_bell"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;i class="icon_cart"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;i class="icon_settings"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="content"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/section&gt;
+&lt;/div&gt;</code></pre>
+                            </td>
+                        </tr>
+                    </table>
+                </section>
+            </div>
+        </section>
+    </div>
+</body>
+
+</html>

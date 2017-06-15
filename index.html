@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Personal Data</title>
+    <link rel="stylesheet" href="lib/ux-styleguide/dist/ux-styleguide.min.css">
+    <link rel="stylesheet" href="main.css">
+    <script async src="associates.js"></script>
+    <script async src="main.js"></script>
+  </head>
+  <body onload="initApp();">
+    <header class="header">
+      <div class="header-logo">
+          <i class="icon_homedepot"></i>
+      </div>
+      <div class="header-info">
+          <label class="product-info">Product Name</label>
+          <label class="user-info">User Name | Store #0000 | Atlanta, GA</label>
+      </div>
+      <div class="header-search">
+          <input type="search" placeholder="Search Here"/>
+          <i class="icon_search"></i>
+      </div>
+      <div class="header-actions">
+          <div><i class="icon_bell"></i></div>
+          <div><i class="icon_cart"></i></div>
+          <div><i class="icon_settings"></i></div>
+      </div>
+    </header>
+
+    <main class="content">
+      <div class="SS-ESS">
+        <h1>Maintain Personal Data</h1>
+        <section class="basic-assoc-info">
+            <article class="selectAssociate">
+
+
+              <fieldset>
+                <legend>Default Select Input</legend>
+                  <div class="select-container">
+                    <form class="assoclist" action="index.html" method="post">
+                      <!-- Please select an Associate: -->
+                      <select id="select1" name="select1" title="Default Select"
+                          onChange="associateIdWithPerson(this);">
+                        <option value="">Please select an Associate</option>
+                        <option value="Assoc 1">155 - Deirdre Coulliette-Robldeo</option>
+                        <option value="Assoc 2">264 - Laura Welsh</option>
+                        <option value="Assoc 3">858 - Linda Palermo</option>
+                      </select>
+                    </form>
+                  </div>
+              </fieldset>
+
+
+              <hr>
+              <ul id="assocNames"></ul>
+            </article>
+            <article class="assocInfo">
+              <h2>Associate Information</h2>
+              <hr>
+              <ul id="assocAttrib"></ul>
+            </article>
+            <form class='profile'>
+            <fieldset>
+                <legend>Default Text Field</legend>
+                <div class="text-input-container">
+                 <img id='profileImage' src="" alt="" width="100px">
+               </div>
+                <div class="text-input-container">
+                    <input type="text" id="fname" name="first-name" title="First Name" placeholder="Update first name" />
+                    <label for="first-name">First Name</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="lname" name="last-name" title="Last Name" placeholder="Update last name" />
+                    <label for="last-name">Last Name</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="phnNbr"  name="phone-number" title="Phone Number" pattern="^\d{4}-\d{3}-\d{4}$"  placeholder="Update phone number"/>
+                    <label for="phone-number">Phone Number</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="addr1" name="address-line1" title="Address Line1" placeholder="Update Street Address Line 1" />
+                    <label for="address-line1">Address Line1</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="addr2" name="address-line2" title="Address Line2" placeholder="Update Street Address Line 2" />
+                    <label for="address-line2">Address Line2</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="city" name="city" title="City" placeholder="Update City" placeholder="Update city"/>
+                    <label for="city">City</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="state" name="state" title="State" placeholder="Update State" placeholder="Update state" />
+                    <label for="state">State</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="zip" name="zip-code" title="Zip Code" placeholder="Update Zip Code" placeholder="Update zip code"/>
+                    <label for="zip-code">Zip Code</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="emerCntct" name="emergency-contact" title="Emergency Contact" placeholder="Update emergency contact"/>
+                    <label for="emergency-contact">Emergency Contact</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="annivDt" name="anniversary-date" title="Anniversary Date" placeholder="Update anniversary date"/>
+                    <label for="anniversary-date">Anniversary Date</label>
+                </div>
+                <div class="text-input-container">
+                    <input type="text" id="email" name="email-address" title="Email Address" placeholder="Update email address"/>
+                    <label for="email-address">Email Address</label>
+                </div>
+            </fieldset>
+          </form>
+  </section>
+
+    <button id="save" onclick="updateArray()" class="button primary hidden">SAVE</button>
+    <a href="#" class="button">CANCEL</a>
+
+
+      </div>
+    </main>
+  </body>
+</html>

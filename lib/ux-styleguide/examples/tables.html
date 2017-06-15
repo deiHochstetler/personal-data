@@ -1,0 +1,311 @@
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../dist/ux-styleguide.min.css">
+	<style>
+		body {
+			background-color: #fff;
+			overflow-x: hidden;
+		}
+		
+		h3 {
+			border-bottom: 2px solid #444;
+			margin-bottom: 0;
+		}
+		
+		code,
+		pre {
+			padding: 0 3px 2px;
+			font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+			font-size: 12px;
+			color: #333333;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			height: 100%;
+		}
+		
+		pre {
+			display: block;
+			padding: 9.5px;
+			margin: 0 0 10px;
+			font-size: 13px;
+			line-height: 20px;
+			word-break: break-all;
+			word-wrap: break-word;
+			white-space: pre;
+			white-space: pre-wrap;
+			background-color: #f5f5f5;
+			border: 1px solid #ccc;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+		}
+		
+		pre code {
+			padding: 0;
+			color: inherit;
+			white-space: pre;
+			white-space: pre-wrap;
+			background-color: transparent;
+			border: 0;
+		}
+		
+		section {
+			margin: auto;
+			padding: 10px;
+		}
+		
+		table.code-table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 10px 20px;
+			min-width: 1240px;
+		}
+		
+		td.code-td {
+			width: 50%;
+			vertical-align: top;
+			height: 1px;
+		}
+		
+		@media screen and (max-width: 600px) {
+			table.code-table {
+				min-width: 100%;
+			}
+		}
+		
+		.back-btn {
+			width: 70px !important;
+			font-size: 20px !important;
+		}
+		
+		.back-btn > a {
+			color: #fff;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<div class="header-logo">
+			<i class="icon_homedepot"></i>
+		</div>
+		<div class="header-info">
+			<label class="product-info">UX Styleguide</label>
+			<label class="user-info">Compilation of HTML, CSS and SASS packages provided by Home Depot UX.</label>
+		</div>
+		<div class="header-search">
+		</div>
+		<div class="header-actions">
+			<div class="back-btn"><a href="../index.html">Back</a></div>
+		</div>
+	</div>
+	<div class="content">
+		<h2>TABLES</h2>
+		<section>
+			<h3>GENERIC TABLE</h3>
+			<table class="code-table">
+				<tr>
+					<td class="code-td">
+						<table class="standard-table">
+							<thead>
+								<tr>
+									<th class="sortable ascending"><a href="#">Ascending Col</a></th>
+									<th class="sortable descending"><a href="#">Descending Col</a></th>
+									<th><a href="#">Column</a></th>
+									<th class="sortable"><a href="#">Sortable Col</a></th>
+									<th class="sortable"><a href="#">Sortable Col</a></th>
+									<th><a href="#">Column</a></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Row1:Data1</td>
+									<td>Row1:Data2</td>
+									<td>Row1:Data3</td>
+									<td>Row1:Data4</td>
+									<td>Row1:Data5</td>
+									<td>Row1:Data6</td>
+								</tr>
+								<tr>
+									<td>Row2:Data1</td>
+									<td>Row2:Data2</td>
+									<td>Row2:Data3</td>
+									<td>Row2:Data4</td>
+									<td>Row2:Data5</td>
+									<td>Row2:Data6</td>
+								</tr>
+								<tr>
+									<td>Row3:Data1</td>
+									<td>Row3:Data2</td>
+									<td>Row3:Data3</td>
+									<td>Row3:Data4</td>
+									<td>Row3:Data5</td>
+									<td>Row3:Data6</td>
+								</tr>
+								<tr>
+									<td>Row4:Data1</td>
+									<td>Row4:Data2</td>
+									<td>Row4:Data3</td>
+									<td>Row4:Data4</td>
+									<td>Row4:Data5</td>
+									<td>Row4:Data6</td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td class="code-td">
+						<pre><code>&lt;table class="standard-table"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th class="sortable ascending"&gt;&lt;a href="#"&gt;Ascending Col&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th class="sortable descending"&gt;&lt;a href="#"&gt;Descending Col&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;&lt;a href="#"&gt;Column&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th class="sortable"&gt;&lt;a href="#"&gt;Sortable Col&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th class="sortable"&gt;&lt;a href="#"&gt;Sortable Col&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th&gt;&lt;a href="#"&gt;Column&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row1:Data1&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row1:Data2&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row1:Data3&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row1:Data4&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row1:Data5&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row1:Data6&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row2:Data1&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row2:Data2&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row2:Data3&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row2:Data4&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row2:Data5&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row2:Data6&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row3:Data1&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row3:Data2&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row3:Data3&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row3:Data4&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row3:Data5&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row3:Data6&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row4:Data1&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row4:Data2&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row4:Data3&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row4:Data4&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row4:Data5&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Row4:Data6&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h3>TABLE WITH CALCULATED COLUMNS</h3>
+			<table class="code-table">
+				<tr>
+					<td class="code-td">
+						<table class="standard-table">
+							<thead>
+								<tr>
+									<th class="sortable decimal"><a href="#">Decimal Col</a></th>
+									<th class="sortable"><a href="#">Calculated Col</a></th>
+									<th class="sortable"><a href="#">Calculated Col</a></th>
+									<th class="sortable"><a href="#">Non-Decimal Col</a></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td class="decimal">$12.23</td>
+									<td class="calculated-first">$23</td>
+									<td class="calculated-last">$34</td>
+									<td>$45</td>
+								</tr>
+								<tr>
+									<td class="decimal">$12.23</td>
+									<td class="calculated-first">$23</td>
+									<td class="calculated-last">$34</td>
+									<td>$45</td>
+								</tr>
+								<tr>
+									<td class="decimal">$12.23</td>
+									<td class="calculated-first">$23</td>
+									<td class="calculated-last">$34</td>
+									<td>$45</td>
+								</tr>
+								<tr>
+									<td class="decimal">$12.23</td>
+									<td class="calculated-first">$23</td>
+									<td class="calculated-last">$34</td>
+									<td>$45</td>
+								</tr>
+								<tr class="totals">
+									<td>Total</td>
+									<td class="calculated-first">$92</td>
+									<td class="calculated-last">$136</td>
+									<td></td>
+								</tr>
+							</tbody>
+						</table>
+					</td>
+					<td class="code-td">
+						<pre><code>&lt;table class="standard-table"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;thead&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th class="sortable decimal"&gt;&lt;a href="#"&gt;Decimal Col&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th class="sortable"&gt;&lt;a href="#"&gt;Calculated Col&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th class="sortable"&gt;&lt;a href="#"&gt;Calculated Col&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;th class="sortable"&gt;&lt;a href="#"&gt;Non-Decimal Col&lt;/a&gt;&lt;/th&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/thead&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;tbody&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="decimal"&gt;$12.23&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-first"&gt;$23&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-last"&gt;$34&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$45&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="decimal"&gt;$12.23&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-first"&gt;$23&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-last"&gt;$34&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$45&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="decimal"&gt;$12.23&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-first"&gt;$23&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-last"&gt;$34&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$45&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="decimal"&gt;$12.23&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-first"&gt;$23&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-last"&gt;$34&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;$45&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;tr class="totals"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;Total&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-first"&gt;$92&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td class="calculated-last"&gt;$136&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;td&gt;&lt;/td&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tr&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/tbody&gt;
+&lt;/table&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</div>
+	<script src="responsive-table.js"></script>
+</body>
+
+</html>

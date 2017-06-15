@@ -1,0 +1,23 @@
+
+.hidden {
+  visibility: hidden;
+}
+
+.no-display {
+  display: none;
+}
+
+h1, h2 {
+ color: #F96302 ;
+ background-color: lightgrey;
+ font: bold;
+ font-weight: bolder;
+ text-align: center;
+ border: 1px solid blue;
+}
+
+.profileImage {
+width: 100px;
+
+ /*width: 25%;*/
+}

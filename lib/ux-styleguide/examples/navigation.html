@@ -1,0 +1,280 @@
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="../dist/ux-styleguide.min.css">
+    <style>
+        body {
+            margin: 0;
+            background-color: #fff;
+            overflow-x: hidden;
+        }
+        
+        h3 {
+            border-bottom: 2px solid #444;
+            margin-bottom: 0;
+        }
+        
+        code,
+        pre {
+            padding: 0 3px 2px;
+            font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+            font-size: 12px;
+            color: #333333;
+            -webkit-border-radius: 3px;
+            -moz-border-radius: 3px;
+            border-radius: 3px;
+            height: 100%;
+        }
+        
+        pre {
+            display: block;
+            padding: 9.5px;
+            margin: 0 0 10px;
+            font-size: 13px;
+            line-height: 20px;
+            word-break: break-all;
+            word-wrap: break-word;
+            white-space: pre;
+            white-space: pre-wrap;
+            background-color: #f5f5f5;
+            border: 1px solid #ccc;
+            border: 1px solid rgba(0, 0, 0, 0.15);
+            -webkit-border-radius: 4px;
+            -moz-border-radius: 4px;
+            border-radius: 4px;
+        }
+        
+        pre code {
+            padding: 0;
+            color: inherit;
+            white-space: pre;
+            white-space: pre-wrap;
+            background-color: transparent;
+            border: 0;
+        }
+        
+        section {
+            margin: auto;
+            padding: 10px;
+        }
+        
+        table {
+            width: 100%;
+            border-collapse: separate;
+            border-spacing: 10px 20px;
+        }
+        
+        td {
+            width: 50%;
+            vertical-align: top;
+            height: 1px;
+        }
+		
+		.back-btn {
+			width: 70px !important;
+			font-size: 20px !important;
+		}
+		
+		.back-btn > a {
+			color: #fff;
+			text-decoration: none;
+		}
+    </style>
+</head>
+
+<body>
+    <div class="header">
+        <div class="header-logo">
+            <i class="icon_homedepot"></i>
+        </div>
+        <div class="header-info">
+            <label class="product-info">Product Name</label>
+            <label class="user-info">User Name | Store #0000 | Atlanta, GA</label>
+        </div>
+        <div class="header-search">
+            <input type="search" placeholder="Search Here" />
+            <i class="icon_search"></i>
+        </div>
+        <div class="header-actions">
+            <div><i class="icon_bell"></i></div>
+            <div><i class="icon_cart"></i></div>
+            <div><i class="icon_settings"></i></div>
+			<div class="back-btn"><a href="../index.html">Back</a></div>
+        </div>
+    </div>
+    <div class="content">
+        <section>
+            <h3>HEADER VARIANTS</h3>
+            <table>
+                <tr>
+                    <td>
+                        Complete header with Logo, App Information, Search and Actions.<br/><br/>
+                        <b>*NOTE:</b> App Information contains: <i>product-info</i> which is Product Name and <i>user-info</i>                        which can contain any secondary information.<br/>
+                        <b>*NOTE:</b> Actions can contain any icon (up to 6) and is not limited to those shown above.<br/>
+                        <b>*NOTE:</b> Requires a div with <i>content</i> class immediately after to ensure proper positioning
+                        and scrolling.<br/>
+                        <b>*NOTE:</b> On mobile: Actions will be shifted and fixed to bottom of the screen, Search will be
+                        hidden unless in landscape view.
+                    </td>
+                    <td>
+                        <pre><code>&lt;div class="header"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-logo"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_homedepot"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-info"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="product-info"&gt;Product Name&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="user-info"&gt;User Name | Store #0000 | Atlanta, GA&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-search"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="search" placeholder="Search Here"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_search"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-actions"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;i class="icon_bell"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;i class="icon_cart"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;i class="icon_settings"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="content"&gt;&lt;/div&gt;</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Header without Search<br/><br/>
+                        <b>*NOTE: </b>Need to keep <i>header-search</i> div but remove contents.<br/>
+                    </td>
+                    <td>
+                        <pre><code>&lt;div class="header"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-logo"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_homedepot"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-info"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="product-info"&gt;Product Name&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="user-info"&gt;User Name | Store #0000 | Atlanta, GA&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-search"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-actions"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;i class="icon_bell"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;i class="icon_cart"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div&gt;&lt;i class="icon_settings"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="content"&gt;&lt;/div&gt;</code></pre>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        Header without Actions<br/><br/>
+                        <b>*NOTE: </b> Need to keep <i>header-actions</i> div but remove contents.
+                    </td>
+                    <td>
+                        <pre><code>&lt;div class="header"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-logo"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_homedepot"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-info"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="product-info"&gt;Product Name&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;label class="user-info"&gt;User Name | Store #0000 | Atlanta, GA&lt;/label&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-search"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;input type="search" placeholder="Search Here"/&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_search"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="header-actions"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="content"&gt;&lt;/div&gt;</code></pre>
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section>
+            <h3>STEPPER NAVIGATION</h3>
+            <table>
+                <tr>
+                    <td colspan="2">
+                        <div class="stepper">
+                            <div class="step completed">
+                                <div class="step-circle"><span>1</span></div>
+                                <div class="step-title">Completed Step</div>
+                            </div>
+                            <div class="step-bar"></div>
+                            <div class="step completed editable">
+                                <div class="step-circle"><span>2</span></div>
+                                <div class="step-title">Editable Step
+                                    <div class="step-optional">w/Sub Text</div>
+                                </div>
+                            </div>
+                            <div class="step-bar"></div>
+                            <div class="step completed error">
+                                <div class="step-circle"><span>3</span></div>
+                                <div class="step-title">Error Step
+                                    <div class="step-optional">w/Sub Text</div>
+                                </div>
+                            </div>
+                            <div class="step-bar"></div>
+                            <div class="step active">
+                                <div class="step-circle"><i class="icon_cart"></i></div>
+                                <div class="step-title">Current Step
+                                    <div class="step-optional">w/Custom Icon</div>
+                                </div>
+                            </div>
+                            <div class="step-bar"></div>
+                            <div class="step">
+                                <div class="step-circle"><span>5</span></div>
+                                <div class="step-title">Plain Text</div>
+                            </div>
+                        </div>
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <b>*NOTE:</b> <i>completed</i> step overwrites circle with checkmark<br/>
+                        <b>*NOTE:</b> <i>editable</i> step requires <i>completed</i> class and overwrites circle with pencil<br/>
+                        <b>*NOTE:</b> <i>error</i> step requires <i>completed</i> class and overwrites circle with exclamation mark<br/>
+                        <b>*NOTE:</b> <i>active</i> signifies current step in process<br/>
+                        <b>*NOTE:</b> <i>step-bar</i> is required after every <i>step</i> except for last one
+                    </td>
+                    <td>
+                        <pre><code>&lt;div class="stepper"&gt;
+&lt;div class="step completed"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-circle"&gt;&lt;span&gt;1&lt;/span&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-title"&gt;Completed Step&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="step-bar"&gt;&lt;/div&gt;
+&lt;div class="step completed editable"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-circle"&gt;&lt;span&gt;2&lt;/span&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-title"&gt;Editable Step
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-optional"&gt;w/Sub Text&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="step-bar"&gt;&lt;/div&gt;
+&lt;div class="step completed error"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-circle"&gt;&lt;span&gt;3&lt;/span&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-title"&gt;Error Step
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-optional"&gt;w/Sub Text&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="step-bar"&gt;&lt;/div&gt;
+&lt;div class="step active"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-circle"&gt;&lt;i class="icon_cart"&gt;&lt;/i&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-title"&gt;Current Step
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-optional"&gt;w/Custom Icon&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="step-bar"&gt;&lt;/div&gt;
+&lt;div class="step"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-circle"&gt;&lt;span&gt;5&lt;/span&gt;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="step-title"&gt;Plain Text&lt;/div&gt;
+&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+                    </td>
+                </tr>
+            </table>
+        </section>
+    </div>
+</body>
+
+</html>

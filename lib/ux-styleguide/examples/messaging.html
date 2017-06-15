@@ -1,0 +1,603 @@
+<html lang="en">
+
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<link rel="stylesheet" href="../dist/ux-styleguide.min.css">
+	<style>
+		body {
+			background-color: #fff;
+			overflow-x: hidden;
+		}
+		
+		h3.section {
+			border-bottom: 2px solid #444;
+			margin-bottom: 0;
+		}
+		
+		code,
+		pre {
+			padding: 0 3px 2px;
+			font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+			font-size: 12px;
+			color: #333333;
+			-webkit-border-radius: 3px;
+			-moz-border-radius: 3px;
+			border-radius: 3px;
+			height: 100%;
+		}
+		
+		pre {
+			display: block;
+			padding: 9.5px;
+			margin: 0 0 10px;
+			font-size: 13px;
+			line-height: 20px;
+			word-break: break-all;
+			word-wrap: break-word;
+			white-space: pre;
+			white-space: pre-wrap;
+			background-color: #f5f5f5;
+			border: 1px solid #ccc;
+			border: 1px solid rgba(0, 0, 0, 0.15);
+			-webkit-border-radius: 4px;
+			-moz-border-radius: 4px;
+			border-radius: 4px;
+		}
+		
+		pre code {
+			padding: 0;
+			color: inherit;
+			white-space: pre;
+			white-space: pre-wrap;
+			background-color: transparent;
+			border: 0;
+		}
+		
+		section {
+			margin: auto;
+			padding: 10px;
+		}
+		
+		table {
+			width: 100%;
+			border-collapse: separate;
+			border-spacing: 10px 20px;
+		}
+		
+		td {
+			width: 50%;
+			vertical-align: top;
+			height: 1px;
+		}
+		
+		fieldset {
+			height: 100%;
+		}
+		
+		.dialog-backdrop {
+			padding: 50px;
+			text-align: center;
+		}
+		
+		.dialog-backdrop label {
+			position: relative;
+			top: -30px;
+			color: #ed1c24;
+			font-weight: 700;
+		}
+		
+		.back-btn {
+			width: 70px !important;
+			font-size: 20px !important;
+		}
+		
+		.back-btn > a {
+			color: #fff;
+			text-decoration: none;
+		}
+	</style>
+</head>
+
+<body>
+	<div class="header">
+		<div class="header-logo">
+			<i class="icon_homedepot"></i>
+		</div>
+		<div class="header-info">
+			<label class="product-info">UX Styleguide</label>
+			<label class="user-info">Compilation of HTML, CSS and SASS packages provided by Home Depot UX.</label>
+		</div>
+		<div class="header-search">
+		</div>
+		<div class="header-actions">
+			<div class="back-btn"><a href="../index.html">Back</a></div>
+		</div>
+	</div>
+	<div class="content">
+		<h2>MESSAGING</h2>
+		<section>
+			<h3 class="section">BANNERS</h3>
+			<table>
+				<tr>
+					<td>
+						<div class="banner error">
+							<span class="message">Invalid: Please check the information that you provided and try again.</span>
+							<span class="close"></span>
+						</div>
+
+						<div class="banner information">
+							<span class="message">Information: For easier payment, offer customer Text2Confirm option.</span>
+							<span class="close"></span>
+						</div>
+
+						<div class="banner success">
+							<span class="message">Payment Received: Your payment was successfully processed for the order.</span>
+							<span class="close"></span>
+						</div>
+
+						<div class="banner warning">
+							<span class="message">Update: Application will be down during this weekend for an update.</span>
+							<span class="close"></span>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="banner error"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="message"&gt;Invalid: Please check the information that you provided and try again.&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="close"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="banner information"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="message"&gt;Information: For easier payment, offer customer Text2Confirm option.&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="close"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="banner success"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="message"&gt;Payment Received: Your payment was successfully processed for the order.&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="close"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="banner warning"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="message"&gt;Update: Application will be down during this weekend for an update.&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="close"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h3 class="section">SUBTLE BANNERS</h3>
+			<table>
+				<tr>
+					<td>
+						<div class="banner subtle error">
+							<span class="message">Invalid: Please check the information that you provided and try again.</span>
+							<span class="close"></span>
+						</div>
+
+						<div class="banner subtle information">
+							<span class="message">Information: For easier payment, offer customer Text2Confirm option.</span>
+							<span class="close"></span>
+						</div>
+
+						<div class="banner subtle success">
+							<span class="message">Payment Received: Your payment was successfully processed for the order.</span>
+							<span class="close"></span>
+						</div>
+
+						<div class="banner subtle warning">
+							<span class="message">Update: Application will be down during this weekend for an update.</span>
+							<span class="close"></span>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="banner subtle error"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="message"&gt;Invalid: Please check the information that you provided and try again.&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="close"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="banner subtle information"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="message"&gt;Information: For easier payment, offer customer Text2Confirm option.&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="close"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="banner subtle success"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="message"&gt;Payment Received: Your payment was successfully processed for the order.&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="close"&gt;&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div class="banner subtle warning"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="message"&gt;Update: Application will be down during this weekend for an update.&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="close"&gt;&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h3 class="section">BADGES & LABELS</h3>
+			<table>
+				<tr>
+					<td style="border-bottom: 1px solid #444;">Badges</td>
+					<td style="border-bottom: 1px solid #444;">Labels</td>
+				</tr>
+				<tr>
+					<td>
+						<div>
+							<span class="badge default">0</span>
+							<span class="badge default">10</span>
+							<span class="badge default">100</span>
+							<span class="badge default">1000</span>
+							<span class="badge default subtle">0</span>
+							<span class="badge default subtle">10</span>
+							<span class="badge default subtle">100</span>
+							<span class="badge default subtle">1000</span>
+						</div>
+						<div>
+							<span class="badge primary">0</span>
+							<span class="badge primary">10</span>
+							<span class="badge primary">100</span>
+							<span class="badge primary">1000</span>
+							<span class="badge primary subtle">0</span>
+							<span class="badge primary subtle">10</span>
+							<span class="badge primary subtle">100</span>
+							<span class="badge primary subtle">1000</span>
+						</div>
+						<div>
+							<span class="badge success">0</span>
+							<span class="badge success">10</span>
+							<span class="badge success">100</span>
+							<span class="badge success">1000</span>
+							<span class="badge success subtle">0</span>
+							<span class="badge success subtle">10</span>
+							<span class="badge success subtle">100</span>
+							<span class="badge success subtle">1000</span>
+						</div>
+						<div>
+							<span class="badge danger">0</span>
+							<span class="badge danger">10</span>
+							<span class="badge danger">100</span>
+							<span class="badge danger">1000</span>
+							<span class="badge danger subtle">0</span>
+							<span class="badge danger subtle">10</span>
+							<span class="badge danger subtle">100</span>
+							<span class="badge danger subtle">1000</span>
+						</div>
+						<div>
+							<span class="badge warning">0</span>
+							<span class="badge warning">10</span>
+							<span class="badge warning">100</span>
+							<span class="badge warning">1000</span>
+							<span class="badge warning subtle">0</span>
+							<span class="badge warning subtle">10</span>
+							<span class="badge warning subtle">100</span>
+							<span class="badge warning subtle">1000</span>
+						</div>
+						<div>
+							<span class="badge info">0</span>
+							<span class="badge info">10</span>
+							<span class="badge info">100</span>
+							<span class="badge info">1000</span>
+							<span class="badge info subtle">0</span>
+							<span class="badge info subtle">10</span>
+							<span class="badge info subtle">100</span>
+							<span class="badge info subtle">1000</span>
+						</div>
+					</td>
+					<td>
+						<div>
+							<span class="label default">Default</span>
+							<span class="label default subtle">Default</span>
+						</div>
+						<div>
+							<span class="label primary">Primary</span>
+							<span class="label primary subtle">Primary</span>
+						</div>
+						<div>
+							<span class="label success">Success</span>
+							<span class="label success subtle">Success</span>
+						</div>
+
+						<div>
+							<span class="label danger">Danger</span>
+							<span class="label danger subtle">Danger</span>
+						</div>
+						<div>
+							<span class="label warning">Warning</span>
+							<span class="label warning subtle">Warning</span>
+						</div>
+						<div>
+							<span class="label info">Information</span>
+							<span class="label info subtle">Information</span>
+						</div>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<pre><code>&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge default"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge default"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge default"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge default"&gt;1000&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge default subtle"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge default subtle"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge default subtle"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge default subtle"&gt;1000&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge primary"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge primary"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge primary"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge primary"&gt;1000&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge primary subtle"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge primary subtle"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge primary subtle"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge primary subtle"&gt;1000&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge success"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge success"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge success"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge success"&gt;1000&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge success subtle"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge success subtle"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge success subtle"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge success subtle"&gt;1000&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge danger"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge danger"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge danger"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge danger"&gt;1000&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge danger subtle"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge danger subtle"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge danger subtle"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge danger subtle"&gt;1000&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge warning"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge warning"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge warning"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge warning"&gt;1000&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge warning subtle"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge warning subtle"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge warning subtle"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge warning subtle"&gt;1000&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge info"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge info"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge info"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge info"&gt;1000&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge info subtle"&gt;0&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge info subtle"&gt;10&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge info subtle"&gt;100&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="badge info subtle"&gt;1000&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+					<td>
+						<pre><code>&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label default"&gt;Default&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label default subtle"&gt;Default&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label primary"&gt;Primary&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label primary subtle"&gt;Primary&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label success"&gt;Success&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label success subtle"&gt;Success&lt;/span&gt;
+&lt;/div&gt;
+
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label danger"&gt;Danger&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label danger subtle"&gt;Danger&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label warning"&gt;Warning&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label warning subtle"&gt;Warning&lt;/span&gt;
+&lt;/div&gt;
+&lt;div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label info"&gt;Information&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="label info subtle"&gt;Information&lt;/span&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h3 class="section">DIALOG MODAL</h3>
+			<table>
+				<tr>
+					<td>
+						<div class="dialog-backdrop">
+							<label class="style">dialog backdrop style - background-color: rgba(0, 0, 0, 0.25);</label>
+							<div class="card dialog">
+								<div class="card-toolbar">
+									<span class="card-title"><h2>Dialog Title</h2></span>
+									<i class="icon_close"></i>
+								</div>
+								<div class="card-content">
+									Sample dialog content can be text or other information.
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="card dialog"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card-toolbar"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="card-title"&gt;&lt;h2&gt;Dialog Title&lt;/h2&gt;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;i class="icon_close"&gt;&lt;/i&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="card-content"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Sample dialog content can be text or other information.
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+		</section>
+		<section>
+			<h3 class="section">NOTIFICATIONS</h3>
+			<table>
+				<tr>
+					<td>
+						<div class="notification">
+							<div class="container">
+								<span class="app-icon">&#xe950;</span>
+								<span class="app-name">Application Name</span>
+								<span class="app-email">homer@homedepot.com</span>
+								<span class="app-timestamp">2m</span>
+								<div class="content">
+									<h3>Upcoming Calendar Event</h3>
+									<p>Morbi ante massa, placerat consectetur lacus eu.</p>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="notification"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="container"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-icon"&gt;&amp;#xe950;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-name"&gt;Application Name&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-email"&gt;homer@homedepot.com&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-timestamp"&gt;2m&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="content"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Upcoming Calendar Event&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Morbi ante massa, placerat consectetur lacus eu.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="notification red">
+							<div class="container">
+								<span class="app-icon">&#xe9e7;</span>
+								<span class="app-name">Application Name</span>
+								<span class="app-email">homer@homedepot.com</span>
+								<span class="app-timestamp">2m</span>
+								<div class="content">
+									<h3>Security Update Required</h3>
+									<p>Morbi ante massa, placerat consectetur lacus eu.</p>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="notification red"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="container"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-icon"&gt;&amp;#xe9e7;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-name"&gt;Application Name&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-email"&gt;homer@homedepot.com&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-timestamp"&gt;2m&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="content"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Security Update Required&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Morbi ante massa, placerat consectetur lacus eu.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="notification green">
+							<div class="container">
+								<span class="app-icon">&#xe934;</span>
+								<span class="app-name">Application Name</span>
+								<span class="app-email">homer@homedepot.com</span>
+								<span class="app-timestamp">2m</span>
+								<div class="content">
+									<h3>Payment Received</h3>
+									<p>Morbi ante massa, placerat consectetur lacus eu.</p>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="notification green"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="container"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-icon"&gt;&amp;#xe934;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-name"&gt;Application Name&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-email"&gt;homer@homedepot.com&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-timestamp"&gt;2m&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="content"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Payment Received&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Morbi ante massa, placerat consectetur lacus eu.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="notification blue">
+							<div class="container">
+								<span class="app-icon">&#xe936;</span>
+								<span class="app-name">Application Name</span>
+								<span class="app-email">homer@homedepot.com</span>
+								<span class="app-timestamp">2m</span>
+								<div class="content">
+									<h3>Michael Smithison</h3>
+									<p>Morbi ante massa, placerat consectetur lacus eu.</p>
+								</div>
+							</div>
+							<div class="actions">
+								<span>Reply</span>
+								<span>Archive</span>
+							</div>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="notification blue"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="container"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-icon"&gt;&amp;#xe936;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-name"&gt;Application Name&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-email"&gt;homer@homedepot.com&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-timestamp"&gt;2m&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="content"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Michael Smithison&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Morbi ante massa, placerat consectetur lacus eu.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="actions"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Reply&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span&gt;Archive&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+				<tr>
+					<td>
+						<div class="notification orange">
+							<div class="container">
+								<span class="app-icon">&#xe92a;</span>
+								<span class="app-name">SSC Communications</span>
+								<span class="app-timestamp">Now</span>
+								<div class="content">
+									<h3>Update From the SSC</h3>
+									<p>Morbi ante massa, placerat consectetur lacus eu.</p>
+								</div>
+							</div>
+						</div>
+					</td>
+					<td>
+						<pre><code>&lt;div class="notification orange"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="container"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-icon"&gt;&amp;#xe92a;&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-name"&gt;SSC Communications&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;span class="app-timestamp"&gt;Now&lt;/span&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;div class="content"&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;h3&gt;Update From the SSC&lt;/h3&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;p&gt;Morbi ante massa, placerat consectetur lacus eu.&lt;/p&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&nbsp;&nbsp;&nbsp;&nbsp;&lt;/div&gt;
+&lt;/div&gt;</code></pre>
+					</td>
+				</tr>
+			</table>
+		</section>
+	</div>
+</body>
+
+</html>
